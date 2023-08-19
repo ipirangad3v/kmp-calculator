@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ElevatedButton
@@ -25,9 +26,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ipirangad3v.calculator.core.presentation.CalculatorEvent.OnKeyPressed
+import com.ipirangad3v.calculator.core.presentation.components.AutoResizedText
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -60,9 +63,8 @@ fun CalculatorDisplay(state: CalculatorState) {
             .padding(16.dp),
         horizontalArrangement = Arrangement.End,
     ) {
-        Text(
+        AutoResizedText(
             text = state.displayValue,
-            fontSize = 48.sp,
             color = Color.Black
         )
     }
@@ -116,6 +118,14 @@ fun CalculatorKeyboard(
             }
             Spacer(modifier = Modifier.height(8.dp))
         }
+        Row(
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            KeyButton(text = "←", onKeyPressed = { onKeyPressed("DEL") })
+            KeyButton(text = "C", onKeyPressed = { onKeyPressed("AC") })
+        }
+        Spacer(modifier = Modifier.height(8.dp))
     }
 }
 
@@ -130,6 +140,6 @@ fun KeyButton(
             .size(64.dp)
             .padding(4.dp),
     ) {
-        Text(text = text, fontSize = 20.sp, color = Color.Black)
+        Text(text = text, fontSize = 20.sp, color = Color.Black, textAlign = TextAlign.Center)
     }
 }
