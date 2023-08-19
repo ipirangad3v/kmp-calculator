@@ -23,7 +23,7 @@ Cross-platform support: Run the app on Android and IOS.
 Clone the repository:
 
 <pre>
-```bash
+```
 git clone https://github.com/your-username/calculator-kotlin-multiplatform.git
 ```
 </pre>
