@@ -23,7 +23,7 @@ Cross-platform support: Run the app on Android and IOS.
 Clone the repository:
 
 <pre>
-git clone https://github.com/your-username/calculator-kotlin-multiplatform.git
+git clone https://github.com/ipirangad3v/kmp-calculator
 </pre>
 
 Open the project in Android Studio.
