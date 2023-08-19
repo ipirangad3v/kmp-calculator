@@ -16,7 +16,7 @@ Cross-platform support: Run the app on Android and IOS.
 * Gradle 7.0+
 
   ## Screenshots
-<img src=https://github.com/AnthoniIP/kpm-calculator/blob/main/screenshots/main.png/>
+<img src=https://github.com/ipirangad3v/kpm-calculator/blob/main/screenshots/main.png/>
 
 ## Setup
 
