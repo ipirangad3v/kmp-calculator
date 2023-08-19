@@ -1,7 +1,6 @@
 package com.ipirangad3v.calculator.core.presentation
 
 import dev.icerock.moko.mvvm.viewmodel.ViewModel
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
@@ -16,7 +15,7 @@ class CalculatorViewModel : ViewModel() {
             CalculatorEvent.DoOperation -> {
                 viewModelScope.launch {
                     _state.update {
-                        it.copy(display = "1000")
+                        it.copy(displayValue = "1000")
                     }
                 }
 
