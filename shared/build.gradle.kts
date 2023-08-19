@@ -26,8 +26,10 @@ kotlin {
     ).forEach {
         it.binaries.framework {
             baseName = "shared"
+            isStatic = true
         }
     }
+
 
     sourceSets {
         val commonMain by getting {
