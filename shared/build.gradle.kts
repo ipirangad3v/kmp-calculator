@@ -46,6 +46,7 @@ kotlin {
                 implementation("dev.icerock.moko:mvvm-compose:0.16.1")
                 implementation("dev.icerock.moko:mvvm-flow:0.16.1")
                 implementation("dev.icerock.moko:mvvm-flow-compose:0.16.1")
+                implementation("co.touchlab:kermit:2.0.1")
             }
         }
         val commonTest by getting {
@@ -56,7 +57,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation("androidx.appcompat:appcompat:1.6.1")
-                implementation("androidx.activity:activity-compose:1.7.2")
+                implementation("androidx.activity:activity-compose:1.8.1")
             }
         }
         val androidUnitTest by getting
@@ -95,7 +96,7 @@ android {
     }
 }
 dependencies {
-    implementation("androidx.core:core:1.10.1")
+    implementation("androidx.core:core:1.12.0")
     commonMainApi("dev.icerock.moko:mvvm-core:0.16.1")
     commonMainApi("dev.icerock.moko:mvvm-compose:0.16.1")
     commonMainApi("dev.icerock.moko:mvvm-flow:0.16.1")
